@@ -7,6 +7,10 @@ hook_add = '''
   inoremap <expr><S-Tab> pumvisible() ? "\<UP>" : "\<S-Tab>"
 '''
 
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+
 # colorschemes
 [[plugins]]
 repo = 'raphamorim/lucario'

@@ -1,8 +1,8 @@
 inoremap <silent> jj <ESC>
 
 " save my right pinky
-nnoremap ; :
-nnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 
 " yank from cursor to EOL
 nnoremap Y y$
