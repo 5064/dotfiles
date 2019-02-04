@@ -1,3 +1,6 @@
+set encoding=utf-8
+scriptencoding utf-8
+
 "initial Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -25,6 +28,11 @@ if dein#load_state('~/.cache/dein')
   call dein#save_state()
 endif
 
+
+set runtimepath+=$XDG_CONFIG_HOME/nvim/rc
+runtime! *.rc.vim
+
+
 " Required:
 filetype plugin indent on
 syntax enable
@@ -35,6 +43,3 @@ if dein#check_install()
 endif
 
 "End Scripts-------------------------
-
-set runtimepath+=$XDG_CONFIG_HOME/nvim/rc
-runtime! *.rc.vim

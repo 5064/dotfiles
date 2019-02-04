@@ -4,6 +4,8 @@ set nowritebackup
 set nobackup
 set noswapfile
 
+set clipboard^=unnamed,unnamedplus
+
 " Tabs ============================================= 
 
 set smarttab
