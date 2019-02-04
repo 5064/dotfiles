@@ -36,7 +36,5 @@ endif
 
 "End Scripts-------------------------
 
-source ./keymaps.vim
-source ./themes.vim
-source ./options.vim
-
+set runtimepath+=$XDG_CONFIG_HOME/nvim/rc
+runtime! *.rc.vim

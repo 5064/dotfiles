@@ -2,4 +2,6 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
-colorscheme lucario 
+set background=dark
+colorscheme tender
+
