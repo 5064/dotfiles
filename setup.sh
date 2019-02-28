@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ln -s $HOME/Documents/dotfiles/nvim $XDG_CONFIG_HOME/nvim
+ln -snf "$HOME/Documents/dotfiles/nvim" "$HOME/.config/nvim"
