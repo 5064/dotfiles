@@ -1,4 +1,4 @@
-set number relativenumber
+set number 
 
 set nowritebackup
 set nobackup
@@ -21,3 +21,19 @@ set autoindent smartindent
 set ignorecase
 set incsearch
 set wrapscan
+
+" Language Servers =================================
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+"if executable('gopls')
+"   au User lsp_setup call lsp#register_server({
+"       \ 'name': 'gopls',
+"       \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+"       \ 'whitelist': ['go'],
+"       \ })
+"endif
