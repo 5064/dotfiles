@@ -29,7 +29,7 @@ if dein#load_state('~/.cache/dein')
 endif
 
 
-set runtimepath+=$XDG_CONFIG_HOME/nvim/rc
+set runtimepath+=$HOME/.config/nvim/rc
 runtime! *.rc.vim
 
 
