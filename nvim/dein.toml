@@ -34,3 +34,5 @@ repo = 'jacoborus/tender.vim'
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
 
+[[plugins]]
+repo = 'morhetz/gruvbox'

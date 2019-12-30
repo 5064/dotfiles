@@ -1,3 +1,6 @@
 #!/bin/bash
 
-ln -snf "$HOME/Documents/dotfiles/nvim" "$HOME/.config/nvim"
+DF_DIR=`pwd`
+
+ln -snf "$DF_DIR/nvim" "$HOME/.config/nvim"
+ln -snf "$DF_DIR/.inputrc" "$HOME/.inputrc"
