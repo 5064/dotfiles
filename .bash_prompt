@@ -1,0 +1,59 @@
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+
+function add_line {
+  if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
+    PS1_NEWLINE_LOGIN=true
+  else
+    printf '\n'
+  fi
+}
+PROMPT_COMMAND='add_line'
+
+C() {
+  case $1 in
+    black)    echo -e -n "\033[0;30";;
+    Bblack)   echo -e -n "\033[0;90";;
+    red)      echo -e -n "\033[0;31";;
+    Bred)     echo -e -n "\033[0;91";;
+    green)    echo -e -n "\033[0;32";;
+    Bgreen)   echo -e -n "\033[0;92";;
+    yellow)   echo -e -n "\033[0;33";;
+    Byellow)  echo -e -n "\033[0;93";;
+    blue)     echo -e -n "\033[0;34";;
+    Bblue)    echo -e -n "\033[0;94";;
+    magenta)  echo -e -n "\033[0;35";;
+    Bmagenta) echo -e -n "\033[0;95";;
+    cyan)     echo -e -n "\033[0;36";;
+    Bcyan)    echo -e -n "\033[0;96";;
+    white)    echo -e -n "\033[0;37";;
+    Bwhite)   echo -e -n "\033[0;97";;
+    *) echo -e -n "\033[0";;
+  esac
+}
+
+BG() {
+  case $1 in
+    black)    echo -e -n "40m";;
+    Bblack)   echo -e -n "100m";;
+    red)      echo -e -n "41m";;
+    Bred)     echo -e -n "101m";;
+    green)    echo -e -n "42m";;
+    Bgreen)   echo -e -n "102m";;
+    yellow)   echo -e -n "43m";;
+    Byellow)  echo -e -n "103m";;
+    blue)     echo -e -n "44m";;
+    Bblue)    echo -e -n "104m";;
+    magenta)  echo -e -n "45m";;
+    Bmagenta) echo -e -n "105m";;
+    cyan)     echo -e -n "46m";;
+    Bcyan)    echo -e -n "106m";;
+    white)    echo -e -n "47m";;
+    Bwhite)   echo -e -n "107m";;
+    *) echo -e -n "0m";;
+  esac
+}
+
+export PS1='\[$(C yellow)m\]$(__git_ps1 "<< %s >>")\[$(C reset)m\]\n\[$(C red);$(BG Bwhite)\] \t \[$(C Bwhite);$(BG magenta)\] \w \[$(C);$(BG)\]\n\[$(C Bcyan)m\]\$\[$(C reset)m\] '
+
+
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
